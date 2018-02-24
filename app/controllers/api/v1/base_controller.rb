@@ -10,6 +10,12 @@ class Api::V1::BaseController < ApplicationController
 	# disable the CSRF token
 	skip_before_action :verify_authenticity_token
 
+	rescue_from Pundit::NotAuthorizedError, with: :deny_access
+
+	def deny_access
+		api_error(status: 403)
+	end
+
 	def destroy_session
 		request.session_options[:skip] = true
 	end
