@@ -12,6 +12,8 @@ class Api::V1::BaseController < ApplicationController
 
 	rescue_from Pundit::NotAuthorizedError, with: :deny_access
 
+	attr_accessor :current_user
+
 	def deny_access
 		api_error(status: 403)
 	end
@@ -43,5 +45,16 @@ class Api::V1::BaseController < ApplicationController
 		api_error(status: 401)
 	end
 
-	attr_accessor :current_user
+	private
+		def paginate(resource)
+			resource = resource.page(params[:page] || 1)
+			if params[:per_page]
+				resource = resource.per(params[:per_page])
+			end
+
+			logger.info params
+			logger.info resource
+			return resource
+		end
+
 end

@@ -30,7 +30,17 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# 权限管理
 gem 'pundit'
+
+# 分页
+gem 'kaminari'
+
+# api调用频率限制
+# gem 'redis-throttle', git: 'git://github.com/andreareginato/redis-throttle.git'
+
+# CORS 允许其他域名的网页通过ajax请求api
+gem 'rack-cors'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
