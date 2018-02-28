@@ -33,8 +33,14 @@ gem 'jbuilder', '~> 2.5'
 # 高亮测试报告
 gem 'minitest-reporters'
 
+# 模板测试
+gem 'rails-controller-testing'
+
 # 自动化测试
 gem 'guard'
+
+# bootstrap
+gem 'bootstrap-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
