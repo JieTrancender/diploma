@@ -42,6 +42,9 @@ gem 'guard'
 # bootstrap
 gem 'bootstrap-sass'
 
+# debug
+gem 'byebug'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

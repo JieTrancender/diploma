@@ -9,8 +9,16 @@
   <body>
 	  <%= render 'layouts/header' %>
   	<div class="container">
+
+      <% flash.each do |msgType, msg| %>
+        <%= content_tag(:div, msg, class: "alert alert-#{msgType}") %>
+       <!--  <div class="alert alert-<%= msgType %>">
+          <%= msg %>
+        </div> -->
+      <% end %>
   		<%= yield %>
   		<%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
   	</div>
   </body>
 </html>
