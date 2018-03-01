@@ -42,6 +42,9 @@ gem 'guard'
 # bootstrap
 gem 'bootstrap-sass'
 
+# jquery
+gem 'jquery-rails'
+
 # debug
 gem 'byebug'
 
