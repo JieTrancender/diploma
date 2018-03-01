@@ -48,6 +48,12 @@ gem 'jquery-rails'
 # debug
 gem 'byebug'
 
+gem 'faker'
+
+# 分页
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
