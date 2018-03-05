@@ -28,7 +28,9 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
+  # config.public_file_server.enabled = true
+  # config.assets.precompiled = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -63,8 +65,8 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'smtp.sendcloud.net:25'
-  config.action_mailer.default_url_options = { host: host }
+  host = 'jie-trancender.org:3001'
+  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
   ActionMailer::Base.smtp_settings = {
     :address => 'smtp.sendcloud.net',
     :port => '25',

@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: diploma_dev_production
-  username: diploma
-  password: <%= ENV['DIPLOMA_PROJECT_DATABASE_PASSWORD'] %>
+  database: diploma_production
+  username: root
+  password: 
