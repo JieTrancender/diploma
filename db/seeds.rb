@@ -10,14 +10,18 @@ User.create!(
 	name: "JTrancender", email: "jie-email@jie-trancender.org",
 	password: "jason@jing.com",
 	password_confirmation: "jason@jing.com",
-	admin: true
+	admin: true,
+	activated: true,
+	activated_at: Time.zone.now
 )
 
-1000.times do |n|
+400.times do |n|
 	User.create!(
 		name: Faker::Name.name,
 		email: "example-#{n + 1}@example.com",
 		password: "password",
-		password_confirmation: "password"
+		password_confirmation: "password",
+		activated: true,
+		activated_at: Time.zone.now
 	)
 end

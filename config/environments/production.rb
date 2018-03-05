@@ -61,6 +61,18 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "diploma_project_#{Rails.env}"
   config.action_mailer.perform_caching = false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  host = 'smtp.sendcloud.net:25'
+  config.action_mailer.default_url_options = { host: host }
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.sendcloud.net',
+    :port => '25',
+    :authentication => 'login',
+    :domain => 'jie-trancender.org',
+    :user_name => 'jie-email@jie-trancender.org',
+    :password => 'ShaoJie@qq.com'
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
