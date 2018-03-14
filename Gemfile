@@ -48,11 +48,21 @@ gem 'jquery-rails'
 # debug
 gem 'byebug'
 
+# 生成虚拟的大学名称、虚拟的电话号码、虚拟的Hipster Ipsum句子和虚拟的Chuck Norris语录
 gem 'faker'
 
 # 分页
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+
+# 图像上传
+gem 'carrierwave'
+
+# 图像调整
+gem 'mini_magick'
+
+# 生产环境上传图像
+gem 'fog'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

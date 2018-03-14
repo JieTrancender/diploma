@@ -21,3 +21,5 @@
 
 # Ignore Sprint files.
 /spring/*.pid
+
+/public/uploads
