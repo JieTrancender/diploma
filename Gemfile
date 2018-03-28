@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://gems.ruby-china.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -40,13 +40,13 @@ gem 'rails-controller-testing'
 gem 'guard'
 
 # bootstrap
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '3.3.7'
 
 # jquery
 gem 'jquery-rails'
 
 # debug
-gem 'byebug'
+# gem 'byebug'
 
 # 生成虚拟的大学名称、虚拟的电话号码、虚拟的Hipster Ipsum句子和虚拟的Chuck Norris语录
 gem 'faker'
@@ -62,7 +62,12 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 # 生产环境上传图像
-gem 'fog'
+gem 'fog', '2.0.0'
+
+gem 'nokogiri', '1.8.2'
+
+gem 'nio4r', '2.2.0'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

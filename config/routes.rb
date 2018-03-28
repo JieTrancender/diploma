@@ -27,4 +27,12 @@ Rails.application.routes.draw do
   resources :password_resets, only: %i[new create edit update]
   resources :microposts, only: %i[create destroy]
   resources :relationships, only: %i[create destroy]
+
+  namespace :api do
+    namespace :v1, { format: 'json' } do
+      get 'static_pages/home'
+      get 'static_pages/help'
+      get 'static_pages/about'
+    end
+  end
 end
