@@ -27,7 +27,7 @@ set -x
 # rm /rails/tmp/pids/server.pid
 
 # setup database and start puma
-# RAILS_ENV=development bundle install
+RAILS_ENV=development bundle install
 RAILS_ENV=development bundle exec rake db:create
 RAILS_ENV=development bundle exec rake db:migrate
 RAILS_ENV=development bundle exec rake db:seed
