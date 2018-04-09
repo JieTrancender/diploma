@@ -23,3 +23,5 @@
 /spring/*.pid
 
 /public/uploads
+
+nohup.out
