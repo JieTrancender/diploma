@@ -102,4 +102,12 @@ class UserTest < ActiveSupport::TestCase
       assert_not michael.feed.include?(post_unfollowed)
     end
   end
+
+  test "assosciated pictures should be destroyed" do
+    @user.save
+    @user.pictures.create!(key: 'test.jpg', url: 'images/test.jpg')
+    assert_difference 'Picture.count', -1 do
+      @user.destroy
+    end
+  end
 end

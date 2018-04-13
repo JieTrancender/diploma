@@ -21,12 +21,22 @@ Rails.application.routes.draw do
   resources :users do
     member do
       get :following, :followers
+      resources :pictures do
+        collection do
+          get 'create', as: :create
+        end
+      end
     end
   end
   resources :account_activations, only: %i[edit]
   resources :password_resets, only: %i[new create edit update]
   resources :microposts, only: %i[create destroy]
   resources :relationships, only: %i[create destroy]
+  # resources :pictures do
+  #   collection do
+  #     get 'create', as: :create
+  #   end
+  # end
 
   namespace :api do
     namespace :v1, { format: 'json' } do

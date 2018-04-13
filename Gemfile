@@ -68,6 +68,8 @@ gem 'nokogiri', '1.8.2'
 
 gem 'nio4r', '2.2.0'
 
+gem 'qiniu'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

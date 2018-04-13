@@ -1,0 +1,9 @@
+<% provide(:title, 'Picture') %>
+
+<div class="row">
+	<div class="col-md-12">
+		<%= (1..10).each do %>
+			<%= image_tag 'http://sources.jie-trancender.org/images/img_qiniu.jpg?imageView2/2/w/320/h/480', alt: 'Picture', {height:200, width: 200} %>
+		<% end %>
+	</div>
+</div>

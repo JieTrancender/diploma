@@ -284,3 +284,18 @@ span.picture {
 	}
 }
 
+
+// pictures
+.pictures {
+	list-style: none;
+	li {
+		padding: 10px 0;
+		border-top: 1px solid #e8e8e8;
+	}
+
+	.img-picture {
+		float: left;
+		margin-right: 10px;
+		// margin-top: 5px;
+	}
+}
