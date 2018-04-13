@@ -65,7 +65,7 @@ class PicturesController < ApplicationController
 	  		3600
 	  	)
 
-	  	callback_url = create_pictures_url + "?endUser=#{params[:endUser]}"
+	  	callback_url = pictures_url + "?endUser=#{params[:endUser]}"
 	  	# logger.info callback_url
 	  	# callback_url = "jie-trancender.org:3001/callback?endUser=#{params[:endUser]}"
 	  	callback_body = 'bucket=$(bucket)&key=$(key)&etag=$(etag)&fname=$(fname)&fsize=$(fsize)&mimeType=$(mimeType)&' +
