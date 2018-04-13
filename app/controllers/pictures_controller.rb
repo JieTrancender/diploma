@@ -26,6 +26,22 @@ class PicturesController < ApplicationController
 	def create
 		logger.info params.inspect
 
+		@picture = @user.pictures.create(
+			key = params[:key],
+			url = DOMAIN + params[:key],
+			endUser = params[:endUser]
+		)
+
+		if @picture.save
+			render json: params
+		else
+			render json: {faild: '404'}
+		end
+	end
+
+	def create1
+		logger.info params.inspect
+
 		upload_ret = JSON.parse(Base64.urlsafe_decode64(params[:upload_ret]))
 		logger.info upload_ret
 		@picture = Picture.new(
