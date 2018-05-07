@@ -26,7 +26,7 @@ User.create!(
 	activated_at: Time.zone.now
 )
 
-400.times do |n|
+200.times do |n|
 	User.create!(
 		name: Faker::Name.name,
 		email: "example-#{n + 1}@example.com",
@@ -59,3 +59,18 @@ end
 followers.each do |follower|
 	follower.follow(user)
 end
+
+
+# Pictures
+users = User.order(:created_at).take(6)
+
+50.times do
+	key = "img_qiniu.jpg"
+	url = "http://sources.jie-trancender.org/images/img_qiniu.jpg?imageView2/2/w/320/h/480"
+
+	users.each do |user|
+		user.pictures.create!(key: key, url: url)
+	end
+end
+
+

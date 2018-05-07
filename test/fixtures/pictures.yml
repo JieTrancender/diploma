@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+today:
+  key: "today.img"
+  url: "localhost/image/today.img"
+  created_at: <%= 10.minutes.ago.to_datetime %>
+
+yesterday:
+  key: "yesterday.img"
+  url: "localhost/image/yesterday.img"
+  created_at: <%= 1.day.ago.to_datetime %>
+
+most_recent:
+  key: "recent.img"
+  url: "localhost/image/recent.img"
+  created_at: <%= Time.now.to_datetime %>

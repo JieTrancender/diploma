@@ -270,17 +270,46 @@ input {
 	}
 }
 
-aside {
-	textarea {
-		height: 100px;
-		margin-bottom: 5px;
+
+// pictures
+.pictures {
+	list-style: none;
+	padding: 0;
+	li {
+		padding: 10px 0;
+		border-top: 1px solid #e8e8e8;
 	}
+
+	.list-item {
+		float: left;
+		display: block;
+	}
+
+	.picture-item {
+		float: left;
+	}
+
+	.key {
+		margin-top: 5em;
+		padding-top: 0;
+		display: block;
+		float: left;
+	}
+
 }
 
-span.picture {
-	margin-top: 10px;
-	input {
-		border: 0;
-	}
-}
+
+// aside {
+// 	textarea {
+// 		height: 100px;
+// 		margin-bottom: 5px;
+// 	}
+// }
+
+// span.picture {
+// 	margin-top: 10px;
+// 	input {
+// 		border: 0;
+// 	}
+// }
 
