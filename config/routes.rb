@@ -35,4 +35,10 @@ Rails.application.routes.draw do
       get 'static_pages/about'
     end
   end
+  
+  namespace :api do
+    namespace :v1, {format: 'json'} do
+      resources :users
+    end
+  end
 end
