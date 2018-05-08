@@ -1,0 +1,20 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+
+jane:
+  identityType: 'email'
+  identifier: '582865471@qq.com'
+  password_digest: Digest::MD5.hexdigest 'jason@jing.com'
+  user: jane
+
+jason:
+  identityType: 'email'
+  identifier: 'jie-email@jie-trancender.org'
+  password_digest: Digeset::MD5.hexdigest 'jason@jing.com'
+  user: jason
+
+jtrancender:
+  identityType: 'email'
+  identifier: 'jie-admin@jie-trancender.org'
+  password_digest: Digest::MD5.hexdigest 'jason@jing.com'
+  user: JTrancender
