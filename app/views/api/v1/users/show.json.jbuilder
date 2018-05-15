@@ -1,4 +1,4 @@
 json.user do
-	json.name @user.name
+	json.nickname @user.nickname
 	json.email @user.email
 end

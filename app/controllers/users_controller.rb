@@ -18,6 +18,12 @@ class UsersController < ApplicationController
     redirect_to root_url and true unless @user.activated?
   end
 
+  # def create 
+  #   @user = User.new(user_params)
+  #   @user_auths = UserAuth.new(user_auth_params)
+  # end
+
+
   def create
   	@user = User.new(user_params)
   	if @user.save
@@ -67,9 +73,17 @@ class UsersController < ApplicationController
   end
 
   private
-  	def user_params
-  		params.require(:user).permit(:name, :email, :password, :password_confirmation)
-  	end
+  	# def user_params
+  	# 	params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  	# end
+
+    def user_params
+      params.require(:user).permit(:nickname, :email)
+    end
+
+    def user_auth_params
+      params.require(:user_auth).permit(:identityType, :identifier, :password, :password_confirmation)
+    end
 
     def correct_user
       @user = User.find(params[:id])

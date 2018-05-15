@@ -1,17 +1,21 @@
 <%= form_for(@user, url: yield(:url)) do |f| %>
 	<%= render 'shared/error_messages', object: f.object %>
 
-	<%= f.label :name %>
-	<%= f.text_field :name, class: 'form-control' %>
+	<%= f.label :nickname %>
+	<%= f.text_field :nickname, class: 'form-control' %>
 
 	<%= f.label :email %>
 	<%= f.email_field :email, class: 'form-control' %>
 
-	<%= f.label :password %>
-	<%= f.password_field :password, class: 'form-control' %>
+	<%= fields_for @user.user_auths do |user_auth| %>
+		<%= user_auth.hidden_field :identityType, :value => 'email' %>
 
-	<%= f.label :password_confirmation, "Confirmation" %>
-	<%= f.password_field :password_confirmation, class: 'form-control' %>
+		<%= user_auth.label :password %>
+		<%= user_auth.password_field :password, class: 'form-control' %>
+
+		<%= user_auth.label :password_confirmation, "Confirmation" %>
+		<%= user_auth.password_field :password_confirmation, class: 'form-control' %>
+	<% end %>
 
 	<%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
